@@ -1,19 +1,24 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import WeatherCss from './Weather.css';
+import PropTypes from 'prop-types';
+import './Weather.css';
+//import {MaterialCommunityIcons} from "@expo/vector-icons";
 
-const Weather = ({ data }) => {
+function Weather({location, weather, temp}) {
   return (
-    <div class="weatherGrid">
-      <div class="weatherIcon">
-        
+    <div className="weatherGrid">
+      <div className="weatherIcon">
       </div>
-      <div class="weatherInfo">
-        <h2> {data.weather[0].main} </h2>
-        <h3> {Math.ceil(data.main.temp - 273.15)}℃ </h3>
+      <div className="weatherInfo">
+        <h2> {location} {weather} </h2>
+        <h3> {Math.ceil(temp - 273.15)}℃ </h3>
       </div>
     </div>
   );
 }
-
+Weather.propTypes={
+  location : PropTypes.string.isRequired,
+  weather : PropTypes.string.isRequired,
+  temp : PropTypes.number.isRequired
+}
 export default Weather;
