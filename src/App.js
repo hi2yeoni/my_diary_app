@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 import React from 'react';
 //import axios from 'axios';
-import Weather from './Weather';
 import GetApi from "./GetApi"
 
 class App extends React.Component {

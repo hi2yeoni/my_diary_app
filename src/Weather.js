@@ -3,8 +3,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Weather.css';
 //import {MaterialCommunityIcons} from "@expo/vector-icons";
+const weatherGrop ={
+  0: {colors : <style className="clear"/>},
+  2: {colors : <style className="thunderstorm"/>},
+  3: {colors : <style className="drizzle"/>},
+  5: {colors : <style className="rain"/>},
+  6: {colors : <style className="snow"/>},
+  7: {colors : <style className="atmosphere"/>},
+  8: {colors : <style className="cloud"/>}   
+}
 
-function Weather({location, weather, temp}) {
+const Weather = ({ location, weather, temp, key}) =>{
+  
   return (
     <div className="weatherGrid">
       <div className="weatherIcon">
@@ -16,6 +26,7 @@ function Weather({location, weather, temp}) {
     </div>
   );
 }
+
 Weather.propTypes={
   location : PropTypes.string.isRequired,
   weather : PropTypes.string.isRequired,

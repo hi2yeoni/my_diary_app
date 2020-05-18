@@ -14,14 +14,15 @@ const GetApi = () => {
                 console.log(error);
             }
         )
+        const getWeather = ({ latitude, longitude }) => {
+            fetch(`https://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
+                .then(response => response.json()) //json으로 변환
+                .then(data => setWeather(data))
+    
+            console.log("Test", weather);
+        }
     }, []);
-    const getWeather = ({ latitude, longitude }) => {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
-            .then(response => response.json()) //json으로 변환
-            .then(data => setWeather(data))
-
-        console.log("Test", weather);
-    }
+    
     const isLoading = (weather == null);
     return (
         <div>
