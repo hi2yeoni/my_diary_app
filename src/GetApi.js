@@ -18,11 +18,9 @@ const GetApi = () => {
             fetch(`https://api.openweathermap.org/data/2.5/weather?&lat=${latitude}&lon=${longitude}&appid=${API_KEY}`)
                 .then(response => response.json()) //json으로 변환
                 .then(data => setWeather(data))
-    
-            console.log("Test", weather);
         }
     }, []);
-    
+    console.log("useEffect", weather);
     const isLoading = (weather == null);
     return (
         <div>
@@ -31,7 +29,7 @@ const GetApi = () => {
                     location={weather.name}
                     weather={weather.weather[0].main}
                     temp={weather.main.temp}
-                    key={weather.id}
+                    id={weather.weather[0].id}
                 />
             }
         </div>

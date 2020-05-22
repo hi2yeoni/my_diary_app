@@ -4,18 +4,22 @@ import PropTypes from 'prop-types';
 import './Weather.css';
 //import {MaterialCommunityIcons} from "@expo/vector-icons";
 const weatherGrop ={
-  0: {colors : <style className="clear"/>},
-  2: {colors : <style className="thunderstorm"/>},
-  3: {colors : <style className="drizzle"/>},
-  5: {colors : <style className="rain"/>},
-  6: {colors : <style className="snow"/>},
-  7: {colors : <style className="atmosphere"/>},
-  8: {colors : <style className="cloud"/>}   
+  0: {colors : "clear"},
+  2: {colors : "thunderstorm"},
+  3: {colors : "drizzle"},
+  5: {colors : "rain"},
+  6: {colors : "snow"},
+  7: {colors : "atmosphere"},
+  8: {colors : "cloud"}   
 }
 
-const Weather = ({ location, weather, temp, key}) =>{
+const Weather = ({ location, weather, temp, id}) =>{
+
+  const weatherId = id ===800? weatherGrop[0].colors: weatherGrop[parseInt(id/100)].colors; 
+  document.body.className= weatherId;
   
   return (
+    
     <div className="weatherGrid">
       <div className="weatherIcon">
       </div>
