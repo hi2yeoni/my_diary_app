@@ -1,18 +1,13 @@
 import React from "react";
 import "./Calender.css";
-
-const Calender = () => {
+import "./DemoApp.jsx";
+import DemoApp from "./DemoApp.jsx";
+const Calendar = () => {
+    
     return (
-        <div className="Calender">
-        
-            <div className="Head">
-               
-                <div className="Navigation"> </div>
-                <div className="Content">
-                </div>
-
-            </div>
+        <div id = "calendar">
+         
         </div>
     )
 }
-export default Calender;
+export default Calendar;

@@ -4,6 +4,8 @@ import React from 'react';
 import GetApi from "./GetApi"
 import Calender from './Calender';
 import Category from './Category';
+import Test from './Testfile';
+import DemoApp from './DemoApp';
 
 class App extends React.Component {
   state = {
@@ -12,6 +14,7 @@ class App extends React.Component {
   componentDidMount() { //GPS
     document.title = "My Diary"
   }
+  
 
   render() {
     return (
@@ -19,6 +22,7 @@ class App extends React.Component {
         <GetApi/>
         <Category/>
         <Calender/>
+        <Test/>
 
       </div>
     );

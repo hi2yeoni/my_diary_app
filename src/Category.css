@@ -31,7 +31,7 @@
 .memo:hover{
     background-color: rgba(0,0,0,0.1);
 }
-span.text{
+.text{
     display:inline-flex;
     justify-content: center;
     color:white;
