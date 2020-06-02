@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import Weather from "./Weather"
+import Weather from "./Weather.tsx"
 
-const GetApi = () => {
+const GetWeather = () => {
     //const [longitude, setLongitude] = useState();
     const [weather, setWeather] = useState();
     const API_KEY = '894c0c1d03546d1843b5efd334d6e479';
@@ -36,4 +36,4 @@ const GetApi = () => {
     );
 }
 
-export default GetApi;
+export default GetWeather;  

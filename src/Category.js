@@ -1,21 +1,26 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "./Category.css";
 
 const Category = () => {
+    const activeHomeStyle = {
+        //oododooododoooo
+    }
     return (
-        <div className="category">
-            <div className="head">
-            <span className="title">My Diary</span>
+        <div>
+            <div className="category">
+                <NavLink to="/" className="head">
+                    <span className="title">My Diary</span>
+                </NavLink>
+                <NavLink Link to="/calendar" className="memo">
+                    <span className="text"> Calender</span>
+                </NavLink>
+                <NavLink Link to="/memo" className="memo">
+                    <span className="text"> Memo</span>
+                </NavLink>
             </div>
-            <div className="memo">
-               <span className="text">📆 Calender</span> 
-            </div>
-            <div className="memo">
-            <span className="text">📋   Memo</span>
-            </div>
-            
         </div>
-       
+
 
     )
 }

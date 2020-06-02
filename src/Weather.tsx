@@ -1,9 +1,9 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Weather.css';
 //import {MaterialCommunityIcons} from "@expo/vector-icons";
-const weatherGrop ={
+
+const weatherGrop:any ={
   0: {colors : "clear"},
   2: {colors : "thunderstorm"},
   3: {colors : "drizzle"},
@@ -12,11 +12,17 @@ const weatherGrop ={
   7: {colors : "atmosphere"},
   8: {colors : "cloud"}   
 }
-
-const Weather = ({ location, weather, temp, id}) =>{
-
-  const weatherId = id ===800? weatherGrop[0].colors: weatherGrop[parseInt(id/100)].colors; 
-  document.body.className= weatherId;
+interface weatherParams{
+  location : string;
+  weather : string;
+  temp : number;
+  id : number;
+}
+const Weather = ({ location, weather, temp, id}:weatherParams) =>{
+  let weatherIdValue: number= Math.floor(id/100);
+  const weatherId = (id ===800? weatherGrop[0].colors: weatherGrop[weatherIdValue].colors); 
+  
+  document.body.className= weatherId; 
   
   return (
     
@@ -31,9 +37,5 @@ const Weather = ({ location, weather, temp, id}) =>{
   );
 }
 
-Weather.propTypes={
-  location : PropTypes.string.isRequired,
-  weather : PropTypes.string.isRequired,
-  temp : PropTypes.number.isRequired
-}
+
 export default Weather;

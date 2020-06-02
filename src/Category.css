@@ -1,5 +1,5 @@
 .category{
-    display:block;
+    display:inline-block;
     margin-left:10em ;
     background-color: rgba(255, 255, 255, 0.35);
     width: 20em;
@@ -10,6 +10,7 @@
     display: flex;
     height: 23em;
     justify-content: center;
+    text-decoration: none;
   
 }
 .title{
@@ -25,11 +26,12 @@
 }
 .memo{
     display: flex;
-    justify-content: flex-start;
     height: 4em;
+    text-decoration: none;
+    
 }
 .memo:hover{
-    background-color: rgba(0,0,0,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .text{
     display:inline-flex;
@@ -40,4 +42,5 @@
     font-family: AppleSDGothicNeoM00;
     cursor: pointer;
     height: 40px;
+    
 }

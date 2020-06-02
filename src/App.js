@@ -1,11 +1,8 @@
 /* eslint-disable no-undef */
 import React from 'react';
 //import axios from 'axios';
-import GetApi from "./GetApi"
-import Calender from './Calender';
-import Category from './Category';
-import Test from './Testfile';
-import DemoApp from './DemoApp';
+import GetApi from "./GetWeather.js"
+import Routes from "./Router";
 
 class App extends React.Component {
   state = {
@@ -15,17 +12,13 @@ class App extends React.Component {
     document.title = "My Diary"
   }
   
-
   render() {
     return (
       <div>
-        <GetApi/>
-        <Category/>
-        <Calender/>
-        <Test/>
-
+        <Routes/>
       </div>
     );
   }
 }
+
 export default App;
