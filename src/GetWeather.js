@@ -20,7 +20,6 @@ const GetWeather = () => {
                 .then(data => setWeather(data))
         }
     }, []);
-    console.log("useEffect", weather);
     const isLoading = (weather == null);
     return (
         <div>
