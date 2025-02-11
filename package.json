@@ -17,7 +17,7 @@
     "react-big-calendar": "^0.25.0",
     "react-dom": "^16.13.1",
     "react-native-ionicons": "^5.0.0-rc",
-    "react-scripts": "3.4.1",
+    "react-scripts": "5.0.1",
     "redux": "^4.0.5",
     "typescript": "^3.9.3"
   },
